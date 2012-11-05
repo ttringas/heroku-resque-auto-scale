@@ -27,7 +27,7 @@ module HerokuResqueAutoScale
       private
       
       def authorised?
-        HerokuResqueAutoScale::Config.thresholds.include? Rails.env.to_s
+        HerokuResqueAutoScale::Config.environments.include? Rails.env.to_s
       end
         
     end
