@@ -13,7 +13,7 @@ module HerokuResqueAutoScale
 
       def workers=(qty)
         return unless authorised? 
-        @@heroku.post_ps_scale(ENV['HEROKU_APP_NAME'], 'worker', qty.to_s)
+        @@heroku.post_ps_scale(ENV['HEROKU_APP_NAME'], 'worker', qty.to_i)
       end
 
       def job_count
